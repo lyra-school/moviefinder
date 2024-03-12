@@ -29,8 +29,8 @@
     </div>
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" *ngIf="movieData">
-      <div class="col"  *ngFor="let movie of movieData.Search">
-        <div class="card mt-3">
+      <div class="col d-flex"  *ngFor="let movie of movieData.Search">
+        <div class="card mt-3 align-items-start">
           <img src="{{movie.Poster}}" class="card-img-top img-fluid">
           <div class="card-body">
             <h5 class="card-title">{{movie.Title}}</h5>
