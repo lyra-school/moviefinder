@@ -1,19 +1,16 @@
 import { Component } from '@angular/core';
+import { OmdbApiService } from '../../services/omdb-api.service';
+import { IOMDBResponse } from '../../omdbresponse';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-import { IOMDBResponse } from './omdbresponse';
-import { OmdbApiService } from './services/omdb-api.service';
-import { SearchtitleComponent } from './components/searchtitle/searchtitle.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-searchtitle',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [CommonModule],
+  templateUrl: './searchtitle.component.html',
+  styleUrl: './searchtitle.component.css'
 })
-export class AppComponent {
-  title = 'Movie Finder';
+export class SearchtitleComponent {
   movieData:IOMDBResponse | undefined;
   errorMessage:any;
 
